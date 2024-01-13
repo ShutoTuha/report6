@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Role {
     Scanner scanner;
-
+    
     public Role(){
         scanner = new Scanner(System.in);
     }
