@@ -7,6 +7,10 @@ public class Card {
     int slaveCard = 1;
     int e_citizen = 4;
     int s_citizen = 4;
+    String emperorName = "皇帝";
+    String slaveName = "奴隷";
+    String citizenName = "市民";
+
     Scanner scanner;
 
     public void setEmperorcard(int _emperorCard){
@@ -26,19 +30,31 @@ public class Card {
     }
 
     public int getEmperorcard(){
-        return this.emperorCard;
+        return emperorCard;
     }
 
     public int getSlaveCard(){
-        return this.slaveCard;
+        return slaveCard;
     }
 
     public int getE_citizen(){
-        return this.e_citizen;
+        return e_citizen;
     }
 
     public int getS_citizen(){
-        return this.s_citizen;
+        return s_citizen;
+    }
+
+    public String getEmperorName(){
+        return emperorName;
+    }
+
+    public String getSlaveName(){
+        return slaveName;
+    }
+
+    public String getCitizenName(){
+        return citizenName;
     }
 
     public Card(){
@@ -47,29 +63,41 @@ public class Card {
 
     public void show_restcard(int rolenumber){
         System.out.println("どのカードを選びますか？");
+        while(true){
             if(rolenumber == 0){
-                System.out.printf("0:皇帝 残り%d枚%n",emperorCard);
-                System.out.printf("1:市民 残り%d枚%n",e_citizen);
-                card_check(emperorCard, e_citizen);
+                System.out.printf("0:皇帝 残り%d枚%n",getEmperorcard());
+                System.out.printf("1:市民 残り%d枚%n",getE_citizen());
+                int selectNum =card_check(getEmperorcard(), getE_citizen());
+                if(selectNum == 0){
+                    Battle.battle_system(getEmperorName(),rolenumber);
+                }else{
+                    Battle.battle_system(getCitizenName(),rolenumber);
+                }
             }else{
-                System.out.printf("0:奴隷 残り%d枚%n",slaveCard);
-                System.out.printf("1:市民 残り%d枚%n",s_citizen);
-                card_check(slaveCard, s_citizen);
+                System.out.printf("0:奴隷 残り%d枚%n",getSlaveCard());
+                System.out.printf("1:市民 残り%d枚%n",getS_citizen());
+                int selectNum = card_check(getSlaveCard(), getS_citizen());
+                if(selectNum == 0){
+                    Battle.battle_system(getSlaveName(),rolenumber);
+                }else{
+                    Battle.battle_system(getCitizenName(),rolenumber);
+                }
             }
     }
+}
 
-    public void card_check(int roleCard,int citizen){
+    public int card_check(int roleCard,int citizen){
         while(true){
             int number = scanner.nextInt();
             if(number == 0){
                 if(roleCard != 0){
-                    //ここでBattle.javaのメソッドを入れる
+                    return number;
                 }else{
                     System.out.println("選んだカードはもうありません。別のカードを選んでください。");
                 }
             }else if (number == 1){
                 if(citizen != 0){
-                    //ここでBattle.javaのメソッドを入れる
+                    return number;
                 }else{
                     System.out.println("選んだカードはもうありません。別のカードを選んでください。");
                 }
@@ -79,10 +107,3 @@ public class Card {
         }
     }
 }
-/*if( || ){
-
-                }else{
-                    
-                }
-            }else{
-*/
