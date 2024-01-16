@@ -6,10 +6,10 @@ import java.util.Random;
  */
 public class Enemy {
     /**
-     * 敵の陣営を判断し、カードを選択するメソッド。
-     * roleNameを使い、enemyの陣営を判断する。
-     * そして、numberを使って選ばれたカードが残っているか確認し、カードの選択を確定する。
-     * int number; //0~1の中からランダムな値を格納する。
+     * 敵の陣営を判断し、カードを選択するメソッド。<br>
+     * roleNameを使い、enemyの陣営を判断する。<br>
+     * そして、numberを使って選ばれたカードが残っているか確認し、カードの選択を確定する。<br>
+     * int number; //0~1の中からランダムな値を格納する。<br>
      * @param roleName
      * @return getterメソッドから文字列を返す。getEmperorName(),getSlaveName(),getCitizenName()の中から選ばれる。
      */

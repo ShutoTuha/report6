@@ -5,11 +5,11 @@ package jp.ac.uryukyu.ie.e235710;
 public class Battle extends Card{
 
     /**
-     * 勝ち負けを判断するメソッド。
-     * 最初にp_rolenumを用いて、enemyの陣営を決める。
-     * Enemyクラスのメソッドを呼び出して、enemyにカードを選ばせる。
-     * roleNameとe_roleNameを用いて、勝敗を決める。
-     * String e_roleName; //enemyが選んだカード名を格納する変数。
+     * 勝ち負けを判断するメソッド。<br>
+     * 最初にp_rolenumを用いて、enemyの陣営を決める。<br>
+     * Enemyクラスのメソッドを呼び出して、enemyにカードを選ばせる。<br>
+     * roleNameとe_roleNameを用いて、勝敗を決める。<br>
+     * String e_roleName; //enemyが選んだカード名を格納する変数。<br>
      * @param roleName String型の変数。選ばれたカード名を格納する変数。
      * @param p_rolenum int型の変数。選ばれた陣営の数字が格納されている。皇帝は0,奴隷は1
      * @return resultNum int型の変数。勝敗の数字が格納されている。勝ちが1,負けが2,特殊勝利が3,特殊敗北は4

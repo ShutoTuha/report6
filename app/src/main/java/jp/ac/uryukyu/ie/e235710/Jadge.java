@@ -3,14 +3,14 @@ package jp.ac.uryukyu.ie.e235710;
  * Jadgeクラス プレイヤーとenemyの勝ち点を元に最終的な勝利を決めるクラス
  */
 public class Jadge {
-    /**どちらかの勝ち点が5点以上になるまで、勝負が続く。
-     * 1ターンごとに陣営は自動で入れ替わる。
-     * 1ターンごとにどっちが勝ったか判定し、勝ち点を増やしていく。
-     * int playerScore; プレイヤーの勝ち点が格納されている。
-     * int enemyScore; 敵の勝ち点が格納されている。
-     * int role_initial_value; 皇帝や奴隷のカードの初期値が格納されている。初期値は1
-     * int initial_value; 市民のカードの初期値が格納されている。初期値は4
-     * int resultNum; 勝敗の数字が格納されている変数。
+    /**どちらかの勝ち点が5点以上になるまで、勝負が続く。<br>
+     * 1ターンごとに陣営は自動で入れ替わる。<br>
+     * 1ターンごとにどっちが勝ったか判定し、勝ち点を増やしていく。<br>
+     * int playerScore; プレイヤーの勝ち点が格納されている。<br>
+     * int enemyScore; 敵の勝ち点が格納されている。<br>
+     * int role_initial_value; 皇帝や奴隷のカードの初期値が格納されている。初期値は1<br>
+     * int initial_value; 市民のカードの初期値が格納されている。初期値は4<br>
+     * int resultNum; 勝敗の数字が格納されている変数。<br>
      * @param rolenumber int型の変数。プレイヤーの選んだ陣営の数字が格納されている。
      */
     public static void jadge_game(int rolenumber){

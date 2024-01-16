@@ -3,11 +3,11 @@ package jp.ac.uryukyu.ie.e235710;
  * Scoreクラス プレイヤーとenemyどちらが勝ったか判断し、勝ち点を振り分けるクラス
  */
 public class Score {
-    /**resultNumを用いて、どちらが勝ったか判断し、勝ち点を振り分けるメソッド。
-     * rusultNumが1の時はプレイヤーの勝ち点を1点増やす。2の時はenemyの勝ち点を1点増やす。
-     * 3の時は特殊勝利のためプレイヤーの勝ち点を2点増やす。4の時は特殊敗北のためenemyの勝ち点を2点増やす。
-     * int playerScore; プレイヤーの勝ち点を格納する変数。
-     * int enemyScore; 敵の勝ち点を格納する変数。
+    /**resultNumを用いて、どちらが勝ったか判断し、勝ち点を振り分けるメソッド。<br>
+     * rusultNumが1の時はプレイヤーの勝ち点を1点増やす。2の時はenemyの勝ち点を1点増やす。<br>
+     * 3の時は特殊勝利のためプレイヤーの勝ち点を2点増やす。4の時は特殊敗北のためenemyの勝ち点を2点増やす。<br>
+     * int playerScore; プレイヤーの勝ち点を格納する変数。<br>
+     * int enemyScore; 敵の勝ち点を格納する変数。<br>
      * @param resultNum int型の変数。勝敗の数字を格納する変数。
      * @return array list型の変数。playerScoreとenemyScoreの２つを格納する。
      */
