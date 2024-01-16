@@ -6,26 +6,25 @@ public class Enemy {
     public static String enemy_system(String roleName){
         Random rnd = new Random();
         int number = rnd.nextInt(2);
-        var enemy = new Card();
         while (true) {
             if(roleName.equals("奴隷")){
                 if(number == 0){
-                    if(enemy.slaveCard != 0){
-                        return enemy.getSlaveName();
+                    if(Card.getSlaveCard() != 0){
+                        return Card.getSlaveName();
                     }
                 }else if (number == 1){
-                    if(enemy.s_citizen != 0){
-                        return enemy.getCitizenName();
+                    if(Card.getS_citizen() != 0){
+                        return Card.getCitizenName();
                     }
                 }
             }else if(roleName.equals("皇帝")){
                 if(number == 0){
-                    if(enemy.slaveCard != 0){
-                        return enemy.getEmperorName();
+                    if(Card.getEmperorcard() != 0){
+                        return Card.getEmperorName();
                     }
                 }else if (number == 1){
-                    if(enemy.s_citizen != 0){
-                        return enemy.getCitizenName();
+                    if(Card.getE_citizen() != 0){
+                        return Card.getCitizenName();
                     }
                 }
             }
