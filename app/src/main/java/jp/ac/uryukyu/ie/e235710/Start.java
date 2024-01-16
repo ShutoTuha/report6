@@ -2,12 +2,26 @@ package jp.ac.uryukyu.ie.e235710;
 
 import java.util.Scanner;
 
+/**
+ * Startクラス ゲームを開始するかを決めるクラス
+ * Scanner scannerは入力を受け付けるために使用
+ */
+
 public class Start {
     Scanner scanner;
-
+    /**
+     * コンストラクタ scannerを使えるように設定する。
+     */
     public Start(){
         scanner = new Scanner(System.in);
     }
+
+    /**
+     * scannerで受け取った値でゲームを開始するか判断するメソッド<br>
+     * numberを用いて開始するか判断。<br>
+     * 0は開始、1は終了、それ以外の数字は受け付けない。ただし、文字を入れると強制終了してしまう。<br>
+     * @param number int型の変数、scannerで受け取った値を格納する
+     */
 
     public void selectGame(){
         
